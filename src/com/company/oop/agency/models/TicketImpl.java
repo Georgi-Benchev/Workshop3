@@ -1,11 +1,40 @@
 package com.company.oop.agency.models;
 
 import com.company.oop.agency.models.contracts.Journey;
+import com.company.oop.agency.models.contracts.Ticket;
 
-public class TicketImpl {
+public class TicketImpl implements Ticket {
+
+    private int id;
+    private Journey journey;
+    private double administrativeCosts;
 
     public TicketImpl(int id, Journey journey, double costs) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+        this.id = id;
+        this.journey = journey;
+        this.administrativeCosts = costs;
     }
 
+    @Override
+    public Journey getJourney() {
+        return journey;
+    }
+
+    @Override
+    public double calculatePrice() {
+        return administrativeCosts * journey.calculateTravelCosts();
+    }
+
+    @Override
+    public double getAdministrativeCosts() {
+        return administrativeCosts;
+    }
+
+    @Override
+    public String getAsString() {
+        return String.format(
+                "Ticket ----\n" +
+                "Destination: %s\n" +
+                "Price: %.2f",journey.getDestination(),calculatePrice());
+    }
 }
