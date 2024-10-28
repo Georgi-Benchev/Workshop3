@@ -29,4 +29,10 @@ public class BusImpl extends VehicleBase implements Bus {
         );
     }
 
+
+    @Override
+    public String getAsString() {
+        return "Bus ---\n" + super.getAsString();
+    }
+
 }

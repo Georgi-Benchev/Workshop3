@@ -40,4 +40,9 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
     public boolean hasFreeFood() {
         return hasFreeFood;
     }
+
+    @Override
+    public String getAsString() {
+        return "Train ---\n" + super.getAsString() + "\nHas free food: " + hasFreeFood();
+    }
 }

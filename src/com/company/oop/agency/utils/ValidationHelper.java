@@ -11,8 +11,6 @@ public class ValidationHelper {
         if (value<min||value>max){
             throw new IllegalArgumentException(errorMessage);
         }
-
-        /*throw new UnsupportedOperationException("Not implemented yet.");*/
     }
 
     public static void validateStringLength(String stringToValidate, int minLength, int maxLength, String errorMessage) {

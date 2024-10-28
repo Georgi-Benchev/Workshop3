@@ -34,8 +34,6 @@ public class TrainImpl extends VehicleBase implements Train {
     }
 
 
-
-
     @Override
     protected void validatePassengerCapacity(int passengerCapacity) {
         ValidationHelper.validateValueInRange(
@@ -44,6 +42,12 @@ public class TrainImpl extends VehicleBase implements Train {
                 PASSENGER_MAX_VALUE,
                 PASSENGER_ERROR_MESSAGE
         );
+    }
+
+
+    @Override
+    public String getAsString() {
+        return "Train ---\n" + super.getAsString() + "\nCarts amount: " + getCarts();
     }
 
 }

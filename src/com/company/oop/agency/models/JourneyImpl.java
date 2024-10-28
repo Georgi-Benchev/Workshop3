@@ -87,4 +87,15 @@ public class JourneyImpl implements Journey {
         return vehicle.getPricePerKilometer() * distance;
 
     }
+
+    @Override
+    public String getAsString() {
+        return String.format(
+                "Journey ---\n" +
+                "Start location: %s\n" +
+                "Destination: %s\n" +
+                "Distance: %d\n" +
+                "Vehicle type: %s\n" +
+                "Travel costs: %.2f", startLocation, destination, distance, vehicle.getType(), calculateTravelCosts());
+    }
 }
