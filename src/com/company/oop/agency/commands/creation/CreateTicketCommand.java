@@ -41,7 +41,7 @@ public class CreateTicketCommand implements Command {
 
 
     private void parseParameters(List<String> parameters) {
-        this.journeyId = ParsingHelpers.tryParseInteger(parameters.get(0), "ticket id");
+        this.journeyId = ParsingHelpers.tryParseInteger(parameters.get(0), "journey id");
         this.cost = ParsingHelpers.tryParseDouble(parameters.get(1), "cost");
     }
 

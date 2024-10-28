@@ -47,7 +47,7 @@ public class TrainImpl extends VehicleBase implements Train {
 
     @Override
     public String getAsString() {
-        return "Train ---\n" + super.getAsString() + "\nCarts amount: " + getCarts();
+        return "Train ----\n" + super.getAsString() + "\nCarts amount: " + getCarts() + "\n";
     }
 
 }

@@ -42,6 +42,6 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
 
     @Override
     public String getAsString() {
-        return "Train ---\n" + super.getAsString() + "\nHas free food: " + hasFreeFood();
+        return "Airplane ----\n" + super.getAsString() + "\nHas free food: " + hasFreeFood()+"\n";
     }
 }

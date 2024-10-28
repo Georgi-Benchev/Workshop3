@@ -14,7 +14,7 @@ public class TicketImpl implements Ticket {
         this.id = id;
         this.journey = journey;
         if (costs<0){
-            throw new InvalidUserInputException();
+            throw new InvalidUserInputException(String.format("Value of 'costs' must be a positive number. Actual value: %.2f.",costs));
         }
         this.administrativeCosts = costs;
     }
@@ -39,7 +39,7 @@ public class TicketImpl implements Ticket {
         return String.format(
                 "Ticket ----\n" +
                 "Destination: %s\n" +
-                "Price: %.2f",journey.getDestination(),calculatePrice());
+                "Price: %.2f\n",journey.getDestination(),calculatePrice());
     }
 
     @Override

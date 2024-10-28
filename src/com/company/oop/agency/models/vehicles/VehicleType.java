@@ -10,11 +10,11 @@ public enum VehicleType {
     public String toString() {
         switch (this) {
             case LAND:
-                return "Land";
+                return "LAND";
             case AIR:
-                return "Air";
+                return "AIR";
             case SEA:
-                return "Sea";
+                return "SEA";
             default:
                 throw new IllegalArgumentException();
         }
