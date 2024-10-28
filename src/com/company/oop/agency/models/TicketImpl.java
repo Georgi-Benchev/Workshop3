@@ -37,4 +37,9 @@ public class TicketImpl implements Ticket {
                 "Destination: %s\n" +
                 "Price: %.2f",journey.getDestination(),calculatePrice());
     }
+
+    @Override
+    public int getId() {
+        return id;
+    }
 }

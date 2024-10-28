@@ -1,6 +1,6 @@
 package com.company.oop.agency.models.contracts;
 
-public interface Ticket extends Printable{
+public interface Ticket extends Printable,Identifiable{
 
     Journey getJourney();
 

@@ -2,7 +2,7 @@ package com.company.oop.agency.models.contracts;
 
 import com.company.oop.agency.models.vehicles.contracts.Vehicle;
 
-public interface Journey extends Printable{
+public interface Journey extends Printable,Identifiable{
 
     int getDistance();
 
