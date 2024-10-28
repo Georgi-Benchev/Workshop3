@@ -65,7 +65,7 @@ public class VehicleBase implements Vehicle {
         return pricePerKilometer;
     }
 
-    @Override
+   /* @Override*/
     public int getId() {
         return id;
     }
@@ -75,7 +75,7 @@ public class VehicleBase implements Vehicle {
         return vehicleType;
     }
 
-    @Override
+  /*  @Override*/
     public String getAsString() {
         return String.format(
                 "Passenger capacity: %d\n" +
