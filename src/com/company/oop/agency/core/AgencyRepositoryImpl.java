@@ -53,17 +53,32 @@ public class AgencyRepositoryImpl implements AgencyRepository {
 
     @Override
     public JourneyImpl findJourneyById(int id) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
+        for (JourneyImpl journey : getJourneys()) {
+            if (journey.getId() == id) {
+                return journey;
+            }
+        }
+        throw new ElementNotFoundException(String.format("No record with ID %d", id));
     }
 
     @Override
     public TicketImpl findTicketById(int id) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
+        for (TicketImpl ticket : getTickets()) {
+            if (ticket.getId() == id) {
+                return ticket;
+            }
+        }
+        throw new ElementNotFoundException(String.format("No record with ID %d", id));
     }
 
     @Override
     public AirplaneImpl createAirplane(int passengerCapacity, double pricePerKilometer, boolean hasFreeFood) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
+        AirplaneImpl airplane = new AirplaneImpl(++nextId, passengerCapacity, pricePerKilometer, hasFreeFood);
+        this.vehicles.add(airplane);
+        return airplane;
     }
 
     @Override
@@ -75,17 +90,26 @@ public class AgencyRepositoryImpl implements AgencyRepository {
 
     @Override
     public TrainImpl createTrain(int passengerCapacity, double pricePerKilometer, int carts) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
+        TrainImpl train = new TrainImpl(++nextId, passengerCapacity, pricePerKilometer,carts);
+        this.vehicles.add(train);
+        return train;
     }
 
     @Override
     public JourneyImpl createJourney(String startLocation, String destination, int distance, Vehicle vehicle) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
+        JourneyImpl journey = new JourneyImpl(++nextId, startLocation, destination,distance,vehicle);
+        this.journeys.add(journey);
+        return journey;
     }
 
     @Override
     public TicketImpl createTicket(Journey journey, double costs) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
+        TicketImpl ticket = new TicketImpl(++nextId,journey,costs);
+        this.tickets.add(ticket);
+        return ticket;
     }
 
     // Advanced task: Implement the following generic method that looks for an item by id.
