@@ -98,4 +98,9 @@ public class JourneyImpl implements Journey {
                 "Vehicle type: %s\n" +
                 "Travel costs: %.2f", startLocation, destination, distance, vehicle.getType(), calculateTravelCosts());
     }
+
+    @Override
+    public int getId() {
+        return this.id;
+    }
 }

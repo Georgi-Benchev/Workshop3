@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9cc62e4-29ba-4a3e-9954-a8dce7e930cf" name="Changes" comment="adding .gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f9cc62e4-29ba-4a3e-9954-a8dce7e930cf" name="Changes" comment="adding &quot;ListVehiclesCommand&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/BusImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/BusImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/TrainImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/TrainImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/VehicleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/VehicleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/contracts/Airplane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/contracts/Airplane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/contracts/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/contracts/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/contracts/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/contracts/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/utils/ValidationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/utils/ValidationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/commands/creation/CreateAirplaneCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/commands/creation/CreateAirplaneCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/commands/creation/CreateTicketCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/commands/creation/CreateTicketCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/commands/listing/ListVehiclesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/commands/listing/ListVehiclesCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/JourneyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/JourneyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/TicketImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/TicketImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/AirplaneImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/AirplaneImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -55,6 +54,7 @@
   "keyToString": {
     "Application.Startup.executor": "Debug",
     "JUnit.All in Skeleton.executor": "Run",
+    "JUnit.TicketTests.executor": "Run",
     "JUnit.TrainTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -69,7 +69,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TrainTests">
+  <component name="RunManager" selected="JUnit.All in Skeleton">
     <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.oop.agency.Startup" />
       <module name="Skeleton" />
@@ -91,6 +91,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicketTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Skeleton" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.oop.agency.tests.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.oop.agency.tests.models" />
+      <option name="MAIN_CLASS_NAME" value="com.company.oop.agency.tests.models.TicketTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrainTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Skeleton" />
       <extension name="coverage">
@@ -108,9 +123,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Skeleton" />
+        <item itemvalue="JUnit.TicketTests" />
         <item itemvalue="JUnit.TrainTests" />
         <item itemvalue="Application.Startup" />
-        <item itemvalue="JUnit.All in Skeleton" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +155,87 @@
       <option name="project" value="LOCAL" />
       <updated>1730122257862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implementing enum VehicleType">
+      <option name="closed" value="true" />
+      <created>1730143610920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143610920</updated>
+    </task>
+    <task id="LOCAL-00003" summary="connecting all the contracts between the vehicle interfaces">
+      <option name="closed" value="true" />
+      <created>1730143664941</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143664941</updated>
+    </task>
+    <task id="LOCAL-00004" summary="writing the logic of a ValidationHelper">
+      <option name="closed" value="true" />
+      <created>1730143710759</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143710759</updated>
+    </task>
+    <task id="LOCAL-00005" summary="connecting the vehicles &quot;AirplaneImpl&quot;, &quot;BusImpl&quot;, &quot;TrainImpl&quot; with the VehicleBase">
+      <option name="closed" value="true" />
+      <created>1730143809064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143809064</updated>
+    </task>
+    <task id="LOCAL-00006" summary="writing the &quot;JourneyImpl&quot; class">
+      <option name="closed" value="true" />
+      <created>1730145263902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730145263902</updated>
+    </task>
+    <task id="LOCAL-00007" summary="adding printable and identifiable contracts">
+      <option name="closed" value="true" />
+      <created>1730146313931</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730146313931</updated>
+    </task>
+    <task id="LOCAL-00008" summary="making &quot;Ticket&quot; printable and writing it out in the &quot;TicketImpl&quot;">
+      <option name="closed" value="true" />
+      <created>1730147002036</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730147002036</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adding identifiable functionality">
+      <option name="closed" value="true" />
+      <created>1730148010316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730148010316</updated>
+    </task>
+    <task id="LOCAL-00010" summary="filling the &quot;AgencyRepositoryImpl&quot; class">
+      <option name="closed" value="true" />
+      <created>1730148051766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730148051766</updated>
+    </task>
+    <task id="LOCAL-00011" summary="adding &quot;ListVehiclesCommand&quot;">
+      <option name="closed" value="true" />
+      <created>1730148511583</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730148511583</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +243,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding .gitignore" />
+    <MESSAGE value="implementing enum VehicleType" />
+    <MESSAGE value="connecting all the contracts between the vehicle interfaces" />
+    <MESSAGE value="writing the logic of a ValidationHelper" />
+    <MESSAGE value="connecting the vehicles &quot;AirplaneImpl&quot;, &quot;BusImpl&quot;, &quot;TrainImpl&quot; with the VehicleBase" />
+    <MESSAGE value="writing the &quot;JourneyImpl&quot; class" />
+    <MESSAGE value="adding printable and identifiable contracts" />
+    <MESSAGE value="making &quot;Ticket&quot; printable and writing it out in the &quot;TicketImpl&quot;" />
+    <MESSAGE value="adding identifiable functionality" />
+    <MESSAGE value="filling the &quot;AgencyRepositoryImpl&quot; class" />
+    <MESSAGE value="adding &quot;ListVehiclesCommand&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding &quot;ListVehiclesCommand&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

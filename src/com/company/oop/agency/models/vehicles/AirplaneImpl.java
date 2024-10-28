@@ -18,7 +18,6 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
     public AirplaneImpl(int id, int passengerCapacity, double pricePerKilometer, boolean hasFreeFood) {
         super(id, passengerCapacity, pricePerKilometer, VehicleType.AIR);
         setHasFreeFood(hasFreeFood);
-        /*throw new UnsupportedOperationException("Not implemented yet.");*/
     }
 
 
