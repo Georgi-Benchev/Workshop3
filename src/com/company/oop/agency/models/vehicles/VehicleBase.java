@@ -1,11 +1,9 @@
 package com.company.oop.agency.models.vehicles;
 
-import com.company.oop.agency.models.contracts.Identifiable;
-import com.company.oop.agency.models.contracts.Printable;
 import com.company.oop.agency.models.vehicles.contracts.Vehicle;
 import com.company.oop.agency.utils.ValidationHelper;
 
-public class VehicleBase implements Vehicle, Identifiable, Printable {
+public class VehicleBase implements Vehicle {
     public static final int PASSENGER_MIN_VALUE = 1;
     public static final int PASSENGER_MAX_VALUE = 800;
     private static final String PASSENGER_ERROR_MESSAGE = "A vehicle with less than 1 passenger or more than 800 passengers cannot exist!";
