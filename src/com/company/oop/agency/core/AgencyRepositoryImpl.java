@@ -3,6 +3,7 @@ package com.company.oop.agency.core;
 import com.company.oop.agency.exceptions.ElementNotFoundException;
 import com.company.oop.agency.models.JourneyImpl;
 import com.company.oop.agency.models.TicketImpl;
+import com.company.oop.agency.models.contracts.Identifiable;
 import com.company.oop.agency.models.contracts.Journey;
 import com.company.oop.agency.models.vehicles.AirplaneImpl;
 import com.company.oop.agency.models.vehicles.BusImpl;
@@ -20,6 +21,7 @@ public class AgencyRepositoryImpl implements AgencyRepository {
     private final List<Vehicle> vehicles = new ArrayList<>();
     private final List<JourneyImpl> journeys = new ArrayList<>();
     private final List<TicketImpl> tickets = new ArrayList<>();
+
 
     public AgencyRepositoryImpl() {
         nextId = 0;
@@ -40,38 +42,6 @@ public class AgencyRepositoryImpl implements AgencyRepository {
         return new ArrayList<>(tickets);
     }
 
-    @Override
-    public Vehicle findVehicleById(int id) {
-        for (Vehicle vehicle : getVehicles()) {
-            if (vehicle.getId() == id) {
-                return vehicle;
-            }
-        }
-
-        throw new ElementNotFoundException(String.format("No record with ID %d", id));
-    }
-
-    @Override
-    public JourneyImpl findJourneyById(int id) {
-
-        for (JourneyImpl journey : getJourneys()) {
-            if (journey.getId() == id) {
-                return journey;
-            }
-        }
-        throw new ElementNotFoundException(String.format("No record with ID %d", id));
-    }
-
-    @Override
-    public TicketImpl findTicketById(int id) {
-
-        for (TicketImpl ticket : getTickets()) {
-            if (ticket.getId() == id) {
-                return ticket;
-            }
-        }
-        throw new ElementNotFoundException(String.format("No record with ID %d", id));
-    }
 
     @Override
     public AirplaneImpl createAirplane(int passengerCapacity, double pricePerKilometer, boolean hasFreeFood) {
@@ -91,7 +61,7 @@ public class AgencyRepositoryImpl implements AgencyRepository {
     @Override
     public TrainImpl createTrain(int passengerCapacity, double pricePerKilometer, int carts) {
 
-        TrainImpl train = new TrainImpl(++nextId, passengerCapacity, pricePerKilometer,carts);
+        TrainImpl train = new TrainImpl(++nextId, passengerCapacity, pricePerKilometer, carts);
         this.vehicles.add(train);
         return train;
     }
@@ -99,7 +69,7 @@ public class AgencyRepositoryImpl implements AgencyRepository {
     @Override
     public JourneyImpl createJourney(String startLocation, String destination, int distance, Vehicle vehicle) {
 
-        JourneyImpl journey = new JourneyImpl(++nextId, startLocation, destination,distance,vehicle);
+        JourneyImpl journey = new JourneyImpl(++nextId, startLocation, destination, distance, vehicle);
         this.journeys.add(journey);
         return journey;
     }
@@ -107,11 +77,39 @@ public class AgencyRepositoryImpl implements AgencyRepository {
     @Override
     public TicketImpl createTicket(Journey journey, double costs) {
 
-        TicketImpl ticket = new TicketImpl(++nextId,journey,costs);
+        TicketImpl ticket = new TicketImpl(++nextId, journey, costs);
         this.tickets.add(ticket);
         return ticket;
     }
 
+
     // Advanced task: Implement the following generic method that looks for an item by id.
     // private <T extends {{?}}> T findElementById(List<T> elements, int id) { }
+
+
+    @Override
+    public TicketImpl findTicketById(int id) {
+        return findElementsById(tickets, id);
+    }
+
+    @Override
+    public Vehicle findVehicleById(int id) {
+        return findElementsById(vehicles, id);
+    }
+
+    @Override
+    public JourneyImpl findJourneyById(int id) {
+        return findElementsById(journeys, id);
+    }
+
+    public <E extends Identifiable> E findElementsById(List<E> elementsWithId, int id) {
+        for (E element : elementsWithId) {
+            if (element.getId() == id) {
+                return element;
+            }
+        }
+        throw new ElementNotFoundException(String.format("No record with ID %d", id));
+    }
+
+
 }
