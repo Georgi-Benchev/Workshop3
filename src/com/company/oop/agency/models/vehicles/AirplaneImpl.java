@@ -7,13 +7,13 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
 
 
     private static final String PASSENGER_ERROR_MESSAGE = "A plane cannot have less than 1 passengers or more than 800 passengers.";
-    public static final int PASSENGER_MIN_VALUE = 1;
-    public static final int PASSENGER_MAX_VALUE = 800;
+    private static final int PASSENGER_MIN_VALUE = 1;
+    private static final int PASSENGER_MAX_VALUE = 800;
     /*      same as default no need to override
         public static final double PRICE_MIN_VALUE = 0.1;
         public static final double PRICE_MAX_VALUE = 2.5;
     */
-    boolean hasFreeFood;
+    private boolean hasFreeFood;
 
     public AirplaneImpl(int id, int passengerCapacity, double pricePerKilometer, boolean hasFreeFood) {
         super(id, passengerCapacity, pricePerKilometer, VehicleType.AIR);
@@ -21,7 +21,7 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
     }
 
 
-    public void setHasFreeFood(boolean hasFreeFood) {
+    private void setHasFreeFood(boolean hasFreeFood) {
         this.hasFreeFood = hasFreeFood;
     }
 

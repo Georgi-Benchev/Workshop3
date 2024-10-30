@@ -7,10 +7,10 @@ public class TrainImpl extends VehicleBase implements Train {
 
     private static final String PASSENGER_ERROR_MESSAGE = "A train cannot have less than 30 passengers or more than 150 passengers.";
     private static final String CARTS_ERROR_MESSAGE = "A train cannot have less than 1 cart or more than 15 carts.";
-    public static final int PASSENGER_MIN_VALUE = 30;
-    public static final int PASSENGER_MAX_VALUE = 150;
-    public static final int CARTS_MIN_VALUE = 1;
-    public static final int CARTS_MAX_VALUE = 15;
+    private static final int PASSENGER_MIN_VALUE = 30;
+    private static final int PASSENGER_MAX_VALUE = 150;
+    private static final int CARTS_MIN_VALUE = 1;
+    private static final int CARTS_MAX_VALUE = 15;
 /*    public static final double PRICE_MIN_VALUE = 0.1;
     public static final double PRICE_MAX_VALUE = 2.5;*/  // -> same as default
 
@@ -23,7 +23,7 @@ public class TrainImpl extends VehicleBase implements Train {
         /*throw new UnsupportedOperationException("Not implemented yet.");*/
     }
 
-    public void setCarts(int carts) {
+    private void setCarts(int carts) {
         ValidationHelper.validateValueInRange(carts, CARTS_MIN_VALUE, CARTS_MAX_VALUE, CARTS_ERROR_MESSAGE);
         this.carts = carts;
     }

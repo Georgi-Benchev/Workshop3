@@ -13,9 +13,7 @@ public class TicketImpl implements Ticket {
     public TicketImpl(int id, Journey journey, double costs) {
         this.id = id;
         this.journey = journey;
-        if (costs<0){
-            throw new InvalidUserInputException(String.format("Value of 'costs' must be a positive number. Actual value: %.2f.",costs));
-        }
+        isCostNegativeNumber(costs);
         this.administrativeCosts = costs;
     }
 
@@ -25,13 +23,24 @@ public class TicketImpl implements Ticket {
     }
 
     @Override
-    public double calculatePrice() {
-        return administrativeCosts * journey.calculateTravelCosts();
+    public double getAdministrativeCosts() {
+        return administrativeCosts;
     }
 
     @Override
-    public double getAdministrativeCosts() {
-        return administrativeCosts;
+    public int getId() {
+        return id;
+    }
+
+    private static void isCostNegativeNumber(double costs) {
+        if (costs <0){
+            throw new InvalidUserInputException(String.format("Value of 'costs' must be a positive number. Actual value: %.2f.", costs));
+        }
+    }
+
+    @Override
+    public double calculatePrice() {
+        return administrativeCosts * journey.calculateTravelCosts();
     }
 
     @Override
@@ -40,10 +49,5 @@ public class TicketImpl implements Ticket {
                 "Ticket ----\n" +
                 "Destination: %s\n" +
                 "Price: %.2f\n",journey.getDestination(),calculatePrice());
-    }
-
-    @Override
-    public int getId() {
-        return id;
     }
 }

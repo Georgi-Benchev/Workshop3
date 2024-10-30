@@ -29,7 +29,7 @@ public class ListingHelpers {
 
 //    public static <T extends Printable> String elementsToString(List<T> elements)
 
-    public static <E extends Printable> String elementsToString(List<E> printableElements) {
+    private static <E extends Printable> String elementsToString(List<E> printableElements) {
         List<String> result = new ArrayList<>();
         for (E element : printableElements) {
             result.add(element.getAsString());
