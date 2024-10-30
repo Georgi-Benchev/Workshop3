@@ -18,14 +18,10 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
 
     public AirplaneImpl(int id, int passengerCapacity, double pricePerKilometer, boolean hasFreeFood) {
         super(id, passengerCapacity, pricePerKilometer/*, VehicleType.AIR*/);
-        setHasFreeFood(hasFreeFood);
-        vehicleType=VehicleType.AIR;
-    }
-
-
-    private void setHasFreeFood(boolean hasFreeFood) {
         this.hasFreeFood = hasFreeFood;
+        vehicleType = VehicleType.AIR;
     }
+
 
     @Override
     protected void validatePassengerCapacity(int passengerCapacity) {
@@ -49,6 +45,8 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
 
     @Override
     public String getAsString() {
-        return "Airplane ----\n" + super.getAsString() + "\nHas free food: " + hasFreeFood()+"\n";
+        return "Airplane ----\n" +
+                super.getAsString() +
+                "\nHas free food: " + hasFreeFood() + "\n";
     }
 }
