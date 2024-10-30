@@ -60,7 +60,7 @@ public class JourneyImpl implements Journey {
 
     @Override
     public double calculateTravelCosts() {
-        return vehicle.getPricePerKilometer() * distance;
+        return vehicle.getPricePerKilometer() * getDistance();
 
     }
 
@@ -72,7 +72,12 @@ public class JourneyImpl implements Journey {
                 "Destination: %s\n" +
                 "Distance: %d\n" +
                 "Vehicle type: %s\n" +
-                "Travel costs: %.2f\n", startLocation, destination, distance, vehicle.getType(), calculateTravelCosts());
+                "Travel costs: %.2f\n",
+                getStartLocation(),
+                getDestination(),
+                getDistance(),
+                vehicle.getType(),
+                calculateTravelCosts());
     }
 
     @Override
