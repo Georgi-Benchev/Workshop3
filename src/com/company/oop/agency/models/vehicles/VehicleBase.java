@@ -3,7 +3,7 @@ package com.company.oop.agency.models.vehicles;
 import com.company.oop.agency.models.vehicles.contracts.Vehicle;
 import com.company.oop.agency.utils.ValidationHelper;
 
-public class VehicleBase implements Vehicle {
+public abstract class VehicleBase implements Vehicle {
     private static final int PASSENGER_MIN_VALUE = 1;
     private static final int PASSENGER_MAX_VALUE = 800;
     private static final String PASSENGER_ERROR_MESSAGE = "A vehicle with less than 1 passenger or more than 800 passengers cannot exist!";
@@ -14,13 +14,15 @@ public class VehicleBase implements Vehicle {
     private int id;
     private int passengerCapacity;
     private double pricePerKilometer;
+/*
     private final VehicleType vehicleType;
+*/
 
-    public VehicleBase(int id, int passengerCapacity, double pricePerKilometer, VehicleType vehicleType) {
+    public VehicleBase(int id, int passengerCapacity, double pricePerKilometer/*, VehicleType vehicleType*/) {
        setId(id);
         setPassengerCapacity(passengerCapacity);
         setPricePerKilometer(pricePerKilometer);
-        this.vehicleType = vehicleType;
+     /*   this.vehicleType = vehicleType;*/
     }
 
     private void setId(int id) {
@@ -71,9 +73,9 @@ public class VehicleBase implements Vehicle {
     }
 
     @Override
-    public VehicleType getType() {
+    public abstract VehicleType getType();/* {
         return vehicleType;
-    }
+    }*/
 
     @Override
     public String getAsString() {

@@ -11,8 +11,11 @@ public class BusImpl extends VehicleBase implements Bus {
 /*    public static final double PRICE_MIN_VALUE = 0.1;
     public static final double PRICE_MAX_VALUE = 2.5;*/   // -> same as default
 
+    private final VehicleType vehicleType;
+
     public BusImpl(int id, int passengerCapacity, double pricePerKilometer) {
-        super(id,passengerCapacity,pricePerKilometer,VehicleType.LAND);
+        super(id,passengerCapacity,pricePerKilometer/*,VehicleType.LAND*/);
+        vehicleType=VehicleType.LAND;
     }
 
 
@@ -26,6 +29,11 @@ public class BusImpl extends VehicleBase implements Bus {
                 PASSENGER_MAX_VALUE,
                 PASSENGER_ERROR_MESSAGE
         );
+    }
+
+    @Override
+    public VehicleType getType() {
+        return vehicleType;
     }
 
 

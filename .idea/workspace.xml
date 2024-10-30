@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9cc62e4-29ba-4a3e-9954-a8dce7e930cf" name="Changes" comment="xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/JourneyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/JourneyImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/TicketImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/TicketImpl.java" afterDir="false" />
+    <list default="true" id="f9cc62e4-29ba-4a3e-9954-a8dce7e930cf" name="Changes" comment="encapsulation fixes">
       <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/AirplaneImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/AirplaneImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/BusImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/BusImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/TrainImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/TrainImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/VehicleBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/models/vehicles/VehicleBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/utils/ListingHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/utils/ListingHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/oop/agency/utils/ValidationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/oop/agency/utils/ValidationHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +71,7 @@
       <recent name="C:\Git_HUB_Projects\Workshop3\Skeleton_Workshop3\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Skeleton">
+  <component name="RunManager" selected="Application.Startup">
     <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.oop.agency.Startup" />
       <module name="Skeleton" />
@@ -130,8 +125,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Skeleton" />
         <item itemvalue="Application.Startup" />
+        <item itemvalue="JUnit.All in Skeleton" />
         <item itemvalue="JUnit.TicketTests" />
         <item itemvalue="JUnit.TrainTests" />
       </list>
@@ -322,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730209022966</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="encapsulation fixes">
+      <option name="closed" value="true" />
+      <created>1730278382873</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730278382873</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +353,8 @@
     <MESSAGE value="cleaning unused imports" />
     <MESSAGE value="simplifying the find commands with generic of E extends &quot;Identifiable&quot;" />
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="encapsulation fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="encapsulation fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

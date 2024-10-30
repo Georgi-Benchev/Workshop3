@@ -14,10 +14,12 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
         public static final double PRICE_MAX_VALUE = 2.5;
     */
     private boolean hasFreeFood;
+    private final VehicleType vehicleType;
 
     public AirplaneImpl(int id, int passengerCapacity, double pricePerKilometer, boolean hasFreeFood) {
-        super(id, passengerCapacity, pricePerKilometer, VehicleType.AIR);
+        super(id, passengerCapacity, pricePerKilometer/*, VehicleType.AIR*/);
         setHasFreeFood(hasFreeFood);
+        vehicleType=VehicleType.AIR;
     }
 
 
@@ -33,6 +35,11 @@ public class AirplaneImpl extends VehicleBase implements Airplane {
                 PASSENGER_MAX_VALUE,
                 PASSENGER_ERROR_MESSAGE
         );
+    }
+
+    @Override
+    public VehicleType getType() {
+        return vehicleType;
     }
 
     @Override
