@@ -102,7 +102,7 @@ public class AgencyRepositoryImpl implements AgencyRepository {
         return findElementsById(journeys, id);
     }
 
-    public <E extends Identifiable> E findElementsById(List<E> elementsWithId, int id) {
+    private  <E extends Identifiable> E findElementsById(List<E> elementsWithId, int id) {
         for (E element : elementsWithId) {
             if (element.getId() == id) {
                 return element;
