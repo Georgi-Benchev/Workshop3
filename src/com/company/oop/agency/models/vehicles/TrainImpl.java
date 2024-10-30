@@ -14,13 +14,16 @@ public class TrainImpl extends VehicleBase implements Train {
 /*    public static final double PRICE_MIN_VALUE = 0.1;
     public static final double PRICE_MAX_VALUE = 2.5;*/  // -> same as default
 
-    int carts;
+
+    private final VehicleType vehicleType;
+    private int carts;
+
 
 
     public TrainImpl(int id, int passengerCapacity, double pricePerKilometer, int carts) {
-        super(id, passengerCapacity, pricePerKilometer, VehicleType.LAND);
+        super(id, passengerCapacity, pricePerKilometer/*, VehicleType.LAND*/);
         setCarts(carts);
-        /*throw new UnsupportedOperationException("Not implemented yet.");*/
+        vehicleType=VehicleType.LAND;
     }
 
     private void setCarts(int carts) {
@@ -44,10 +47,17 @@ public class TrainImpl extends VehicleBase implements Train {
         );
     }
 
+    @Override
+    public VehicleType getType() {
+        return this.vehicleType;
+    }
+
 
     @Override
     public String getAsString() {
-        return "Train ----\n" + super.getAsString() + "\nCarts amount: " + getCarts() + "\n";
+        return "Train ----\n" +
+                super.getAsString() +
+                "\nCarts amount: " + getCarts() + "\n";
     }
 
 }
