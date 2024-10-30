@@ -1,13 +1,9 @@
 package com.company.oop.agency.utils;
 
 import com.company.oop.agency.commands.CommandsConstants;
-import com.company.oop.agency.exceptions.ElementNotFoundException;
 import com.company.oop.agency.models.JourneyImpl;
 import com.company.oop.agency.models.TicketImpl;
-import com.company.oop.agency.models.contracts.Identifiable;
-import com.company.oop.agency.models.contracts.Journey;
 import com.company.oop.agency.models.contracts.Printable;
-import com.company.oop.agency.models.contracts.Ticket;
 import com.company.oop.agency.models.vehicles.contracts.Vehicle;
 
 import java.util.ArrayList;
