@@ -19,15 +19,12 @@ public abstract class VehicleBase implements Vehicle {
 */
 
     public VehicleBase(int id, int passengerCapacity, double pricePerKilometer/*, VehicleType vehicleType*/) {
-       setId(id);
+       this.id=id;
         setPassengerCapacity(passengerCapacity);
         setPricePerKilometer(pricePerKilometer);
      /*   this.vehicleType = vehicleType;*/
     }
 
-    private void setId(int id) {
-        this.id = id;
-    }
 
     protected void validatePassengerCapacity(int passengerCapacity) {
         ValidationHelper.validateValueInRange(
